@@ -69,10 +69,34 @@ function Footer() {
 
       </div>
 
-      {/* Bottom Line */}
-      <div className="text-center mt-12 border-t border-gray-800 pt-6 text-sm text-gray-500">
-        © 2026 FITNESS ZONE. All Rights Reserved.
-      </div>
+    {/* Bottom Line */}
+<div className="text-center mt-16 border-t border-gray-800 pt-8 space-y-4">
+
+  <p className="text-sm text-gray-500">
+    © {new Date().getFullYear()} FITNESS ZONE. All Rights Reserved.
+  </p>
+
+  <p className="text-sm text-gray-400 tracking-wide">
+    Design & Developed by{" "}
+    <span className="text-red-600 font-semibold hover:text-red-500 transition duration-300 cursor-pointer">
+      Irfan Ahmad
+    </span>{" "}
+    <span className="text-gray-500">
+      Trainee at{" "}
+      <a
+        href="https://skillmanthan.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative text-white font-medium group"
+      >
+        SkillManthan Technologies Pvt. Ltd.
+        <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      
+    </span>
+  </p>
+
+</div>
 
     </footer>
   );

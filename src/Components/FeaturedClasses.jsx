@@ -147,11 +147,11 @@ function Counter({ number, label }) {
       transition={{ duration: 0.8 }}
       className="flex flex-col items-center"
     >
-      <h3 className="text-5xl md:text-6xl font-extrabold text-black">
+      <h3 className="text-5xl md:text-6xl font-extrabold text-white">
         {count}+
       </h3>
 
-      <p className="mt-4 font-bold text-sm tracking-widest text-black">
+      <p className="mt-4 font-bold text-sm tracking-widest text-white">
         {label}
       </p>
     </motion.div>

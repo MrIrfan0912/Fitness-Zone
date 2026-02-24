@@ -30,17 +30,20 @@ function App() {
       </Routes>
 
       {/* ================= FLOATING CONTACT BUTTONS ================= */}
-      <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+      {/* 🔥 CHANGE YAHAN KIYA GAYA HAI */}
+      <div className="fixed right-4 bottom-[110px] sm:bottom-6 flex flex-col items-center gap-3 z-[999]">
 
         {/* CALL BUTTON */}
         <a
           href="tel:+919628725861"
-          className="bg-red-600 text-white p-4 rounded-full
-          shadow-2xl hover:scale-110
-          hover:shadow-[0_0_30px_red]
-          transition-all duration-300 animate-pulse"
+          className="bg-red-600 text-white w-12 h-12
+          flex items-center justify-center
+          rounded-full shadow-xl
+          hover:scale-110
+          hover:shadow-[0_0_25px_red]
+          transition-all duration-300"
         >
-          <FaPhoneAlt className="text-xl" />
+          <FaPhoneAlt className="text-lg" />
         </a>
 
         {/* WHATSAPP BUTTON */}
@@ -48,12 +51,14 @@ function App() {
           href="https://wa.me/919628725861?text=Hi%20I%20want%20to%20join%20Fitness%20Zone%20Gym%20💪"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-green-500 text-white p-4 rounded-full
-          shadow-2xl hover:scale-110
-          hover:shadow-[0_0_30px_#25D366]
+          className="bg-green-500 text-white w-12 h-12
+          flex items-center justify-center
+          rounded-full shadow-xl
+          hover:scale-110
+          hover:shadow-[0_0_25px_#25D366]
           transition-all duration-300"
         >
-          <FaWhatsapp className="text-xl animate-bounce" />
+          <FaWhatsapp className="text-lg" />
         </a>
 
       </div>

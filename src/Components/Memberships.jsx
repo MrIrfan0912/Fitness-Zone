@@ -5,7 +5,7 @@ import { FaDumbbell, FaInfinity, FaClock } from "react-icons/fa";
 const plans = [
   {
     name: "FLEXI",
-    price: "£99.99",
+    price: "₹99.99",
     icon: <FaDumbbell />,
     features: [
       "12 Classes Per Month",
@@ -15,7 +15,7 @@ const plans = [
   },
   {
     name: "ALL ACCESS",
-    price: "£199.99",
+    price: "₹199.99",
     icon: <FaInfinity />,
     features: [
       "Unlimited Classes",
@@ -26,7 +26,7 @@ const plans = [
   },
   {
     name: "OFF-PEAK",
-    price: "£149.99",
+    price: "₹149.99",
     icon: <FaClock />,
     features: [
       "20 Classes Per Month",
