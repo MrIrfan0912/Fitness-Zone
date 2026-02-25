@@ -35,38 +35,66 @@ const trainers = [
 
 function MeetTheTrainers() {
   return (
-    <section className="relative bg-black text-white py-28 overflow-hidden">
+    <section className="relative bg-black text-white py-24 overflow-x-hidden">
 
-      {/* Big Background Text */}
+      {/* Big Background Text (Overflow Safe) */}
       <h1 className="absolute top-6 left-1/2 -translate-x-1/2
-      text-[80px] md:text-[110px] font-extrabold
-      text-gray-600 opacity-10 tracking-widest
-      whitespace-nowrap pointer-events-none">
-        MEET THE TRAINERS
+        text-[50px] sm:text-[80px] md:text-[110px]
+        font-extrabold tracking-widest
+        text-white/5 whitespace-nowrap
+        pointer-events-none select-none">
+        TRAINERS
       </h1>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
 
-        <div className="text-center mb-16">
+        {/* Heading */}
+        <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold tracking-[6px]">
             MEET THE TRAINERS
           </h2>
+          <div className="w-16 h-1 bg-red-600 mx-auto mt-4"></div>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
           {trainers.map((trainer, index) => (
-            <div key={index} className="trainer-card group">
-              
+            <div
+              key={index}
+              className="relative overflow-hidden rounded-2xl group cursor-pointer"
+            >
+
+              {/* Image */}
               <img
                 src={trainer.img}
                 alt={trainer.name}
-                className="trainer-img"
+                className="w-full h-[380px] object-cover transition duration-700 group-hover:scale-110"
               />
 
-              <div className="trainer-overlay">
-                <h3>{trainer.name}</h3>
-                <p>{trainer.role}</p>
+              {/* Dark Overlay */}
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition duration-500"></div>
+
+              {/* Glow Effect */}
+              <div className="absolute inset-0 rounded-2xl 
+                group-hover:shadow-[0_0_40px_rgba(220,38,38,0.6)]
+                transition duration-500 pointer-events-none">
+              </div>
+
+              {/* Content */}
+              <div className="absolute bottom-0 w-full p-6 
+                bg-gradient-to-t from-black via-black/70 to-transparent
+                translate-y-6 group-hover:translate-y-0
+                transition duration-500">
+
+                <h3 className="text-xl font-bold tracking-wider">
+                  {trainer.name}
+                </h3>
+
+                <p className="text-red-500 mt-1 text-sm tracking-wide">
+                  {trainer.role}
+                </p>
+
               </div>
 
             </div>
